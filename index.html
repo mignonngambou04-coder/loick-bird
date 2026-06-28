@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Loïck Bird Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button id="theme-toggle" class="circle-btn">🌙</button>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="360" height="580"></canvas>
+
+        <div id="start-screen" class="ui-panel">
+            <img src="assets/images/ng.png" id="welcome-logo" alt="Logo NG">
+            
+            <h1 class="game-title">LOÏCK BIRD</h1>
+            <p id="high-score-text">Meilleur Score : 0</p>
+
+            <div class="skin-selection">
+                <h3>CHOISIS LA COULEUR DU CUBE</h3>
+                <div class="skin-options">
+                    <div class="skin-card active" data-skin="green">
+                        <div class="skin-preview">🟩</div>
+                        <span>Vert</span>
+                    </div>
+                    <div class="skin-card" data-skin="retro">
+                        <div class="skin-preview">🟥</div>
+                        <span>Rouge</span>
+                    </div>
+                    <div class="skin-card locked" data-skin="gold" id="gold-skin-card">
+                        <div class="skin-preview">🟨</div>
+                        <span>Or (Score 15+)</span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="start-btn" class="main-btn">JOUER</button>
+            <button id="stats-btn" class="sec-btn">STATISTIQUES</button>
+        </div>
+
+        <div id="stats-panel" class="ui-panel hidden">
+            <h2>STATISTIQUES GLOBALES</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><span>Parties jouées :</span> <strong id="stat-games">0</strong></div>
+                <div class="stat-item"><span>Tuyaux franchis :</span> <strong id="stat-pipes">0</strong></div>
+                <div class="stat-item"><span>Médailles d'or :</span> <strong id="stat-golds">0</strong></div>
+            </div>
+            <button id="close-stats-btn" class="main-btn">RETOUR</button>
+        </div>
+
+        <div id="game-over-panel" class="ui-panel hidden">
+            <h2 class="game-over-title">GAME OVER</h2>
+            <div id="medal-container">🥉</div>
+            <p id="medal-name">Médaille de Bronze</p>
+            <h3 id="final-score-text">Score Final : 0</h3>
+            
+            <button id="retry-btn" class="main-btn">REJOUER</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
