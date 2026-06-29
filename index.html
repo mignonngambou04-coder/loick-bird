@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Loïck Bird Pro</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Corrigé : style.css est directement à la racine -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Bouton Mode Nuit Rapide -->
     <button id="theme-toggle" class="circle-btn">🌙</button>
 
     <div id="game-container">
+        <!-- Zone de Jeu Canvas -->
         <canvas id="gameCanvas" width="360" height="580"></canvas>
 
+        <!-- 1. ÉCRAN D'ACCUEIL PROFESSIONNEL AVEC LOGO -->
         <div id="start-screen" class="ui-panel">
-            <img src="assets/images/ng.png" id="welcome-logo" alt="Logo NG">
+            <!-- Corrigé : ton image s'appelle de.png et est à la racine -->
+            <img src="de.png" id="welcome-logo" alt="Logo NG">
             
             <h1 class="game-title">LOÏCK BIRD</h1>
             <p id="high-score-text">Meilleur Score : 0</p>
 
+            <!-- Sélection de Couleurs / Skins de l'oiseau -->
             <div class="skin-selection">
-                <h3>CHOISIS LA COULEUR DU CUBE</h3>
+                <h3>CHOISIS LA COULEUR DE L'OISEAU</h3>
                 <div class="skin-options">
                     <div class="skin-card active" data-skin="green">
                         <div class="skin-preview">🟩</div>
@@ -41,6 +47,7 @@
             <button id="stats-btn" class="sec-btn">STATISTIQUES</button>
         </div>
 
+        <!-- 2. PANNEAU DE STATISTIQUES AMÉLIORÉ -->
         <div id="stats-panel" class="ui-panel hidden">
             <h2>STATISTIQUES GLOBALES</h2>
             <div class="stats-grid">
@@ -51,6 +58,7 @@
             <button id="close-stats-btn" class="main-btn">RETOUR</button>
         </div>
 
+        <!-- 3. PANNEAU DE GAME OVER ULTRA MODERNE -->
         <div id="game-over-panel" class="ui-panel hidden">
             <h2 class="game-over-title">GAME OVER</h2>
             <div id="medal-container">🥉</div>
@@ -61,6 +69,7 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <!-- Corrigé : script.js est directement à la racine -->
+    <script src="script.js"></script>
 </body>
 </html>
